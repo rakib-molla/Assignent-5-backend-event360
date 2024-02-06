@@ -21,6 +21,13 @@ app.get('/', (req, res) => {
   res.send('Hello, this is your Node.js server with MongoDB!');
 });
 
+// Controller 
+const EventItemsManagementRoute = require('./route/EventItemsManagement/EventItemsManagementRoute');
+
+
+//event-items-management  Routes 
+app.use('/event-items-management', EventItemsManagementRoute);
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
